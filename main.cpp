@@ -89,6 +89,16 @@ void putar_kiri() {
     gazibu(putar);
 }
 
+void besar_tam() {
+    besar++;
+    glutPostRedisplay();
+}
+
+void besar_kec() {
+    besar--;
+    glutPostRedisplay();
+}
+
 void init() {
 
     /* Background and foreground color */
@@ -143,6 +153,12 @@ void keyboard(unsigned char key, int putar, int y) {
     }
     if (key == 'b' || key == 'B') {
         glutIdleFunc(putar_kiri);
+    }
+    if (key == 'f' || key == 'F') {
+        besar_tam();
+    }
+    if (key == 'g' || key == 'G') {
+        besar_kec();
     }
     if (key == 'q' || key == 'Q') {
         exit(0);
