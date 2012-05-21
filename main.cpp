@@ -99,6 +99,19 @@ void besar_kec() {
     glutPostRedisplay();
 }
 
+void putar_skanan() {
+    putar++;
+    glutPostRedisplay();
+}
+
+void putar_skiri() {
+    putar--;
+    glutPostRedisplay();
+}
+
+
+
+
 void init() {
 
     /* Background and foreground color */
@@ -159,6 +172,12 @@ void keyboard(unsigned char key, int putar, int y) {
     }
     if (key == 'g' || key == 'G') {
         besar_kec();
+    }
+    if (key == 'c' || key == 'C') {
+        putar_skanan();
+    }
+    if (key == 'n' || key == 'N') {
+        putar_skiri();
     }
     if (key == 'q' || key == 'Q') {
         exit(0);
