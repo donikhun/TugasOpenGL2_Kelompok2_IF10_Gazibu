@@ -79,6 +79,7 @@ void gazibu(double putar) {
     glFlush();
     glutSwapBuffers();
 }
+
 void putar_kanan() {
     putar += 1.0;
     gazibu(putar);
@@ -109,22 +110,13 @@ void putar_skiri() {
     glutPostRedisplay();
 }
 
-
-
-
 void init() {
-
-    /* Background and foreground color */
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glColor3f(.0, .0, .0);
     glViewport(0, 0, 640, 480);
-
-    /* Select the projection matrix and reset it then setup our view perspective */
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective(30.0f, (GLfloat) 640 / (GLfloat) 480, 0.1f, 200.0f);
-
-    /* Select the modelview matrix, which we alter with rotatef() */
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
@@ -141,10 +133,6 @@ void display() {
     glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
 
-    /*GLfloat lightIntensity[]={3.7f,0.7f,0.7f,1.0f};     Orange
-    GLfloat light_position[]={2.0f,5.0f,3.0f,1.0f};*/
-
-    /*light source properties*/
     GLfloat lightIntensity[] = {1.7f, 1.7f, 1.7f, 1.0f};
     GLfloat light_position[] = {2.0f, 0.0f, 0.0f, 0.0f};
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
