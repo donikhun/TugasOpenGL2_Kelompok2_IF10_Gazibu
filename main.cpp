@@ -80,36 +80,6 @@ void gazibu(double putar) {
     glutSwapBuffers();
 }
 
-void putar_kanan() {
-    putar += 1.0;
-    gazibu(putar);
-}
-
-void putar_kiri() {
-    putar -= 1.0;
-    gazibu(putar);
-}
-
-void besar_tam() {
-    besar++;
-    glutPostRedisplay();
-}
-
-void besar_kec() {
-    besar--;
-    glutPostRedisplay();
-}
-
-void putar_skanan() {
-    putar++;
-    glutPostRedisplay();
-}
-
-void putar_skiri() {
-    putar--;
-    glutPostRedisplay();
-}
-
 void init() {
 
     /* Background and foreground color */
@@ -159,24 +129,6 @@ void display() {
 }
 
 void keyboard(unsigned char key, int putar, int y) {
-    if (key == 'v' || key == 'V') {
-        glutIdleFunc(putar_kanan);
-    }
-    if (key == 'b' || key == 'B') {
-        glutIdleFunc(putar_kiri);
-    }
-    if (key == 'f' || key == 'F') {
-        besar_tam();
-    }
-    if (key == 'g' || key == 'G') {
-        besar_kec();
-    }
-    if (key == 'c' || key == 'C') {
-        putar_skanan();
-    }
-    if (key == 'n' || key == 'N') {
-        putar_skiri();
-    }
     if (key == 'q' || key == 'Q') {
         exit(0);
     }
