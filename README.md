@@ -1,5 +1,4 @@
-Tugas Kelompok Grafika Komputer
-Tema: Gazibu
+Tugas Kelompok Grafika Komputer Gazibu
 Kelas IF 10
 Kelompok:
 Febrian Doni(10108513)
