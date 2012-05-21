@@ -79,6 +79,15 @@ void gazibu(double putar) {
     glFlush();
     glutSwapBuffers();
 }
+void putar_kanan() {
+    putar += 1.0;
+    gazibu(putar);
+}
+
+void putar_kiri() {
+    putar -= 1.0;
+    gazibu(putar);
+}
 
 void init() {
 
@@ -129,6 +138,12 @@ void display() {
 }
 
 void keyboard(unsigned char key, int putar, int y) {
+    if (key == 'v' || key == 'V') {
+        glutIdleFunc(putar_kanan);
+    }
+    if (key == 'b' || key == 'B') {
+        glutIdleFunc(putar_kiri);
+    }
     if (key == 'q' || key == 'Q') {
         exit(0);
     }
