@@ -28,6 +28,8 @@ void gazibu(double putar) {
     glPushMatrix();
     glScaled(0.8, 0.04, 0.8);
     glTranslatef(0.0, -30.2, 0.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5, 0, 0);
     glutSolidCube(7.0);
     glPopMatrix();
 
@@ -36,6 +38,8 @@ void gazibu(double putar) {
     glScaled(0.8, 1.0, 0.8);
     glTranslatef(0.0, 0.9, 0.0);
     glRotated(-90, 1, 0, 0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0, 0, 0.6);
     glutSolidCone(4.5, 2, 8, 1);
     glPopMatrix();
 
@@ -43,6 +47,8 @@ void gazibu(double putar) {
     glScaled(1.2, 0.25, 1.2);
 
 
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0, 0.5, 0);
 
     //tiang1
     glPushMatrix();
@@ -124,15 +130,6 @@ void init() {
 
 void display() {
 
-    GLfloat mat_ambient[] = {0.0f, 1.0f, 2.0f, 1.0f};
-    GLfloat mat_diffuse[] = {0.0f, 1.5f, .5f, 1.0f};
-    GLfloat mat_specular[] = {5.0f, 1.0f, 1.0f, 1.0f};
-    GLfloat mat_shininess[] = {50.0f};
-    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-
     GLfloat lightIntensity[] = {1.7f, 1.7f, 1.7f, 1.0f};
     GLfloat light_position[] = {2.0f, 0.0f, 0.0f, 0.0f};
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
@@ -185,6 +182,7 @@ int main(int argc, char *argv[]) {
     glShadeModel(GL_SMOOTH);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_NORMALIZE);
+    glEnable(GL_COLOR_MATERIAL);
     glutKeyboardFunc(keyboard);
     init();
     glutMainLoop();
