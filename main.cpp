@@ -131,10 +131,10 @@ void init() {
 void display() {
 
     GLfloat lightIntensity[] = {1.7f, 1.7f, 1.7f, 1.0f};
-    GLfloat light_position[] = {2.0f, 0.0f, 0.0f, 0.0f};
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-    GLfloat light_position2[] = {0.0f, 0.0f, 8.0f, 0.0f};
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position2);
+    //GLfloat light_position[] = {2.0f, 0.0f, 0.0f, 0.0f};
+    //glLightfv(GL_LIGHT0, GL_POSITION, light_position);//kanan
+    //GLfloat light_position2[] = {0.0f, 0.0f, 8.0f, 0.0f};
+    //glLightfv(GL_LIGHT0, GL_POSITION, light_position2);
     GLfloat light_position3[] = {0.0f, 5.0f, 2.0f, 0.5f};
     glLightfv(GL_LIGHT0, GL_POSITION, light_position3);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, lightIntensity);
