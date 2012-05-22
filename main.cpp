@@ -7,7 +7,7 @@
  * Kelompok 2
  * Febrian Doni (10108513)
  * Zulfikar Sembiring (10108475)
- * Nurhalimah (10108513)
+ * Nurhalimah(10108513)
  * Muhammad Fauzan (10108473)
  */
 
