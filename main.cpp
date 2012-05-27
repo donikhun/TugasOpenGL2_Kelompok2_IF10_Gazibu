@@ -15,13 +15,13 @@
 #include <GL/glut.h>
 
 
-double putar = 0.0;
-double besar = -13.0;
+double putar = 30.0;
+double besar = 0.0;
 
 void gazibu(double putar) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
-    glTranslatef(0.0f, 0.0f, besar);
+    glTranslatef(0.0f, 0.0f, -13);
     glRotatef(putar, 0.0f, 1.0f, 0.0f);
 
     //lantai
@@ -37,18 +37,30 @@ void gazibu(double putar) {
     glPushMatrix();
     glScaled(0.8, 1.0, 0.8);
     glTranslatef(0.0, 0.9, 0.0);
+    glRotated(45, 0, 1, 0);
     glRotated(-90, 1, 0, 0);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3f(0, 0, 0.6);
-    glutSolidCone(4.5, 2, 8, 1);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCone(4.5, 2, 4, 1);
+    glPopMatrix();
+    
+    //atap2
+    glPushMatrix();
+    glScaled(0.1, 0.2, 0.1);
+    glTranslatef(0.0, 13.8, 0.0);
+    glRotated(45, 0, 1, 0);
+    glRotated(-90, 1, 0, 0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3d(0.803921568627451,0.5215686274509804,0.2470588235294118);
+    glutSolidCone(4.5, 2, 4, 1);
     glPopMatrix();
 
     glTranslatef(0.0, 0.4, 0.0);
     glScaled(1.2, 0.25, 1.2);
 
-
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3f(0, 0.5, 0);
+    
 
     //tiang1
     glPushMatrix();
@@ -97,12 +109,12 @@ void putar_kiri() {
 }
 
 void besar_tam() {
-    besar++;
+    besar+=2;
     glutPostRedisplay();
 }
 
 void besar_kec() {
-    besar--;
+    besar-=2;
     glutPostRedisplay();
 }
 
