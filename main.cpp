@@ -16,12 +16,12 @@
 
 
 double putar = 35.0;
-double besar = 0.0;
+double besar = -17.0;
 
 void gazibu(double putar) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
-    glTranslatef(0.0f, 0.0f, -13);
+    glTranslatef(0.0f, 0.0f, besar);
     glRotatef(putar, 0.0f, 1.0f, 0.0f);
 
     //lantai
@@ -335,7 +335,7 @@ void display() {
     //glLightfv(GL_LIGHT0, GL_POSITION, light_position);//kanan
     //GLfloat light_position2[] = {0.0f, 0.0f, 8.0f, 0.0f};
     //glLightfv(GL_LIGHT0, GL_POSITION, light_position2);
-    GLfloat light_position3[] = {0.0f, 6.0f, 1.0f, 1.0f};
+    GLfloat light_position3[] = {0.0f, 15.0f, 1.0f, 1.0f};
     glLightfv(GL_LIGHT0, GL_POSITION, light_position3);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, lightIntensity);
     glFlush();
