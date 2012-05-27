@@ -15,7 +15,7 @@
 #include <GL/glut.h>
 
 
-double putar = 0.0;
+double putar = 35.0;
 double besar = 0.0;
 
 void gazibu(double putar) {
@@ -55,6 +55,122 @@ void gazibu(double putar) {
     glutSolidCone(4.5, 2, 4, 1);
     glPopMatrix();
 
+    
+    glPushMatrix();
+    glScaled(0.01, 0.12, 0.01);
+    glTranslatef(-100, -6, 240);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glScaled(0.01, 0.12, 0.01);
+    glTranslatef(100, -6, 240);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glScaled(0.01, 0.12, 0.01);
+    glTranslatef(-100, -6, -240);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glScaled(0.01, 0.12, 0.01);
+    glTranslatef(100, -6, -240);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    //depan kanan
+    glPushMatrix();
+    glScaled(0.21, 0.01, 0.01);
+    glTranslatef(8.0, -30.0, 240.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0.0, -73, 0.0);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    //bulat depan kanan
+    glPushMatrix();
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(4.8, -1.7, 6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();
+    
+        //depan kiri
+    glPushMatrix();
+    glScaled(0.21, 0.01, 0.01);
+    glTranslatef(-8.0, -30.0, 240.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0.0, -73, 0.0);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    //bulat depan kiri
+    glPushMatrix();
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(-3.5, -1.7, 6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();    
+    
+    //belakang kanan
+    glPushMatrix();
+    glScaled(0.21, 0.01, 0.01);
+    glTranslatef(8.0, -30.0, -240.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0.0, -73, 0.0);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    //bulat belakang kanan
+    glPushMatrix();
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(4.8, -1.7, -6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();
+    
+        //belakang kiri
+    glPushMatrix();
+    glScaled(0.21, 0.01, 0.01);
+    glTranslatef(-8.0, -30.0, -240.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0.0, -73, 0.0);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    //bulat belakang kiri
+    glPushMatrix();
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(-3.5, -1.7, -6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();
+    
     //samping kanan
     glPushMatrix();
     glScaled(0.01, 0.01, 0.7);
