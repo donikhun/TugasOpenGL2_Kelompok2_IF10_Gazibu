@@ -67,6 +67,8 @@ void gazibu(double putar) {
     glutSolidCube(7.0);
     glPopMatrix();
     
+    //bulat kanan
+    
     //samping kiri
     glPushMatrix();
     glScaled(0.01, 0.01, 0.7);
