@@ -15,7 +15,7 @@
 #include <GL/glut.h>
 
 
-double putar = 30.0;
+double putar = 0.0;
 double besar = 0.0;
 
 void gazibu(double putar) {
@@ -55,6 +55,31 @@ void gazibu(double putar) {
     glutSolidCone(4.5, 2, 4, 1);
     glPopMatrix();
 
+    //samping kanan
+    glPushMatrix();
+    glScaled(0.01, 0.01, 0.7);
+    glTranslatef(240.0, -30.0, 0.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0, -73, 0.0);
+    glScaled(1.0, 1.0, 0.98);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    
+    //samping kiri
+    glPushMatrix();
+    glScaled(0.01, 0.01, 0.7);
+    glTranslatef(-240.0, -30.0, 0.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidCube(7.0);
+    glTranslatef(0, -73, 0.0);
+    glScaled(1.0, 1.0, 0.98);
+    glutSolidCube(7.0);
+    glPopMatrix();
+    
+    
     glTranslatef(0.0, 0.4, 0.0);
     glScaled(1.2, 0.25, 1.2);
 
@@ -109,12 +134,12 @@ void putar_kiri() {
 }
 
 void besar_tam() {
-    besar+=2;
+    besar+=1;
     glutPostRedisplay();
 }
 
 void besar_kec() {
-    besar-=2;
+    besar-=1;
     glutPostRedisplay();
 }
 
