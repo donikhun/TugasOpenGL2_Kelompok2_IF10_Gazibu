@@ -43,7 +43,7 @@ void gazibu(double putar) {
     glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
     glutSolidCone(4.5, 2, 4, 1);
     glPopMatrix();
-    
+
     //atap2
     glPushMatrix();
     glScaled(0.1, 0.2, 0.1);
@@ -51,11 +51,11 @@ void gazibu(double putar) {
     glRotated(45, 0, 1, 0);
     glRotated(-90, 1, 0, 0);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-    glColor3d(0.803921568627451,0.5215686274509804,0.2470588235294118);
+    glColor3d(0.803921568627451, 0.5215686274509804, 0.2470588235294118);
     glutSolidCone(4.5, 2, 4, 1);
     glPopMatrix();
 
-    
+
     glPushMatrix();
     glScaled(0.01, 0.12, 0.01);
     glTranslatef(-100, -6, 240);
@@ -63,7 +63,7 @@ void gazibu(double putar) {
     glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
     glutSolidCube(7.0);
     glPopMatrix();
-    
+
     glPushMatrix();
     glScaled(0.01, 0.12, 0.01);
     glTranslatef(100, -6, 240);
@@ -71,7 +71,7 @@ void gazibu(double putar) {
     glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
     glutSolidCube(7.0);
     glPopMatrix();
-    
+
     glPushMatrix();
     glScaled(0.01, 0.12, 0.01);
     glTranslatef(-100, -6, -240);
@@ -79,7 +79,7 @@ void gazibu(double putar) {
     glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
     glutSolidCube(7.0);
     glPopMatrix();
-    
+
     glPushMatrix();
     glScaled(0.01, 0.12, 0.01);
     glTranslatef(100, -6, -240);
@@ -107,8 +107,8 @@ void gazibu(double putar) {
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
     glPopMatrix();
-    
-        //depan kiri
+
+    //depan kiri
     glPushMatrix();
     glScaled(0.21, 0.01, 0.01);
     glTranslatef(-8.0, -30.0, 240.0);
@@ -127,8 +127,8 @@ void gazibu(double putar) {
     glutSolidTorus(0.1, 0.85, 100, 100);
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
-    glPopMatrix();    
-    
+    glPopMatrix();
+
     //belakang kanan
     glPushMatrix();
     glScaled(0.21, 0.01, 0.01);
@@ -149,8 +149,8 @@ void gazibu(double putar) {
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
     glPopMatrix();
-    
-        //belakang kiri
+
+    //belakang kiri
     glPushMatrix();
     glScaled(0.21, 0.01, 0.01);
     glTranslatef(-8.0, -30.0, -240.0);
@@ -170,7 +170,7 @@ void gazibu(double putar) {
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
     glPopMatrix();
-    
+
     //samping kanan
     glPushMatrix();
     glScaled(0.01, 0.01, 0.7);
@@ -182,10 +182,10 @@ void gazibu(double putar) {
     glScaled(1.0, 1.0, 0.98);
     glutSolidCube(7.0);
     glPopMatrix();
-    
+
     //bulat kanan
     glPushMatrix();
-    glRotated(90,0,1,0);
+    glRotated(90, 0, 1, 0);
     glScaled(0.4, 0.4, 0.4);
     glTranslatef(4.8, -1.7, 6.0);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
@@ -206,7 +206,7 @@ void gazibu(double putar) {
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
     glPopMatrix();
-    
+
     //samping kiri
     glPushMatrix();
     glScaled(0.01, 0.01, 0.7);
@@ -221,7 +221,7 @@ void gazibu(double putar) {
 
     //bulat kiri
     glPushMatrix();
-    glRotated(90,0,1,0);
+    glRotated(90, 0, 1, 0);
     glScaled(0.4, 0.4, 0.4);
     glTranslatef(4.8, -1.7, -6.0);
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
@@ -242,13 +242,13 @@ void gazibu(double putar) {
     glTranslatef(-1.4, 0.0, 0.0);
     glutSolidTorus(0.1, 0.85, 100, 100);
     glPopMatrix();
-    
+
     glTranslatef(0.0, 0.4, 0.0);
     glScaled(1.2, 0.25, 1.2);
 
     glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
     glColor3f(0, 0.5, 0);
-    
+
 
     //tiang1
     glPushMatrix();
@@ -297,12 +297,12 @@ void putar_kiri() {
 }
 
 void besar_tam() {
-    besar+=1;
+    besar += 1;
     glutPostRedisplay();
 }
 
 void besar_kec() {
-    besar-=1;
+    besar -= 1;
     glutPostRedisplay();
 }
 
