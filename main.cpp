@@ -68,6 +68,28 @@ void gazibu(double putar) {
     glPopMatrix();
     
     //bulat kanan
+    glPushMatrix();
+    glRotated(90,0,1,0);
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(4.8, -1.7, 6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();
     
     //samping kiri
     glPushMatrix();
@@ -80,7 +102,30 @@ void gazibu(double putar) {
     glScaled(1.0, 1.0, 0.98);
     glutSolidCube(7.0);
     glPopMatrix();
-    
+
+    //bulat kiri
+    glPushMatrix();
+    glRotated(90,0,1,0);
+    glScaled(0.4, 0.4, 0.4);
+    glTranslatef(4.8, -1.7, -6.0);
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glColor3f(0.5450980392156863, 0.2705882352941176, 0.0745098039215686);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glTranslatef(-1.4, 0.0, 0.0);
+    glutSolidTorus(0.1, 0.85, 100, 100);
+    glPopMatrix();
     
     glTranslatef(0.0, 0.4, 0.0);
     glScaled(1.2, 0.25, 1.2);
@@ -126,12 +171,12 @@ void gazibu(double putar) {
 }
 
 void putar_kanan() {
-    putar += 1.0;
+    putar += 0.5;
     gazibu(putar);
 }
 
 void putar_kiri() {
-    putar -= 1.0;
+    putar -= 0.5;
     gazibu(putar);
 }
 
